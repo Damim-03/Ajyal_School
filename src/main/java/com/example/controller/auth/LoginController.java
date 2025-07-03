@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.example.App;
-import com.example.DBConnection;
+import com.example.DB.DBConnection;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -20,37 +20,36 @@ public class LoginController {
     @FXML private PasswordField passwordField;
 
     @FXML
-    private void handleLogin() {
-        String username = usernameField.getText().trim();
-        String password = passwordField.getText().trim();
+private void handleLogin() {
+    String username = usernameField.getText().trim();
+    String password = passwordField.getText().trim();
 
-        if (username.isEmpty() || password.isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, "Validation Error", "Username and password cannot be empty.");
-            return;
-        }
-
-        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
-
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pst = conn.prepareStatement(sql)) {
-
-            pst.setString(1, username);
-            pst.setString(2, password);
-
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) {
-                showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + username + "!");
-                clearFields();
-                // TODO: Proceed to next scene/dashboard
-            } else {
-                showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
-            }
-
-        } catch (SQLException e) {
-            showAlert(Alert.AlertType.ERROR, "Database Error", e.getMessage());
-        }
+    if (username.isEmpty() || password.isEmpty()) {
+        showAlert(Alert.AlertType.ERROR, "Validation Error", "Username and password cannot be empty.");
+        return;
     }
+
+    String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+    try (Connection conn = DBConnection.getConnection();
+         PreparedStatement pst = conn.prepareStatement(sql)) {
+
+        pst.setString(1, username);
+        pst.setString(2, password);
+
+        ResultSet rs = pst.executeQuery();
+
+        if (rs.next()) {
+            clearFields();
+            App.setRoot("home/Home");
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
+        }
+
+    } catch (SQLException | IOException e) {
+        showAlert(Alert.AlertType.ERROR, "Database Error", e.getMessage());
+    }
+}
 
     @FXML
     private void switchToRegister() {

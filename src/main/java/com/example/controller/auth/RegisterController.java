@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import com.example.App;
-import com.example.DBConnection;
+import com.example.DB.DBConnection;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

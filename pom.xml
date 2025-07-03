@@ -20,8 +20,6 @@
            <artifactId>mysql-connector-j</artifactId>
            <version>8.3.0</version>   <!-- Example working version -->
         </dependency>
-
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>

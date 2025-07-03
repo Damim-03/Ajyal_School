@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.controller.home.HomeController"
+      alignment="CENTER"
+      spacing="30.0">
+
+    <children>
+        <Label text="مدرسة اجيال سكول التعليمية"
+               style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+        <!-- Dashboard buttons row 1 -->
+        <HBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Button text="الطلاب"
+                        onAction="#handleManageStudents"
+                        prefWidth="200" prefHeight="100"
+                        style="-fx-font-size: 16px;"/>
+                <Button text="اساتدة"
+                        onAction="#handleManageTeachers"
+                        prefWidth="200" prefHeight="100"
+                        style="-fx-font-size: 16px;"/>
+            </children>
+        </HBox>
+
+        <!-- Dashboard buttons row 2 -->
+        <HBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Button text="المواد التعليمية"
+                        onAction="#handleManageCourses"
+                        prefWidth="200" prefHeight="100"
+                        style="-fx-font-size: 16px;"/>
+                <Button text="بوابة الدفع"
+                        onAction="#handleManagePayments"
+                        prefWidth="200" prefHeight="100"
+                        style="-fx-font-size: 16px;"/>
+            </children>
+        </HBox>
+
+        <!-- Logout button -->
+        <Button text="Logout"
+                onAction="#handleLogout"
+                prefWidth="150"
+                style="-fx-background-color: #d9534f; -fx-text-fill: white;"/>
+    </children>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+</VBox>
