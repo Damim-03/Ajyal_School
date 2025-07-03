@@ -1,0 +1,2 @@
+# Ignore sensitive DB config
+src/main/resources/db.properties
