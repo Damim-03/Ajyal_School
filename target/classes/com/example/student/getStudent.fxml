@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="724.0" prefWidth="992.0"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            fx:controller="com.example.controller.student.StudentController">
+
+    <Label layoutX="350" layoutY="20" style="-fx-font-size: 20px;" text="قائمة الطلاب" />
+
+    <TableView fx:id="studentTableView" layoutX="14.0" layoutY="173.0" prefHeight="424.0" prefWidth="584.0">
+        <columns>
+            <TableColumn fx:id="studentIdColumn" prefWidth="100" text="الرقم التسلسلي" />
+            <TableColumn fx:id="firstNameColumn" prefWidth="100" text="الاسم الأول" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="100" text="اسم العائلة" />
+            <TableColumn fx:id="fatherNameColumn" prefWidth="100" text="اسم الأب" />
+            <TableColumn fx:id="phoneNumberColumn" prefWidth="100" text="رقم الهاتف" />
+            <TableColumn fx:id="dateOfBirthColumn" prefWidth="139" text="تاريخ الميلاد" />
+            <TableColumn fx:id="genderColumn" prefWidth="80" text="الجنس" />
+            <TableColumn fx:id="schoolRecordColumn" prefWidth="80" text="السجل المدرسي" />
+            <TableColumn fx:id="educationLevelColumn" prefWidth="100" text="الطور الدراسي" />
+        </columns>
+    </TableView>
+
+    <Label layoutX="835.0" layoutY="193.0" text="الاسم الاول :" />    
+    <TextField fx:id="firstNameField" layoutX="628.0" layoutY="189.0" />
+
+    <Label layoutX="835.0" layoutY="243.0" text="الاسم العائلة :" />
+    <TextField fx:id="lastNameField" layoutX="628.0" layoutY="239.0" />
+
+    <Label layoutX="835.0" layoutY="290.0" text="اسم الاب :" />
+    <TextField fx:id="fatherNameField" layoutX="628.0" layoutY="286.0" />
+
+    <Label layoutX="835.0" layoutY="340.0" text="رقم الهاتف :" />
+    <TextField fx:id="phoneNumberField" layoutX="628.0" layoutY="336.0" />
+
+    <Label layoutX="835.0" layoutY="385.0" text="تاريخ الميلاد :" />
+    <TextField fx:id="dateOfBirthField" layoutX="628.0" layoutY="381.0" />
+
+    <Label layoutX="835.0" layoutY="482.0" text="الجنس :" />
+    <TextField fx:id="genderField" layoutX="628.0" layoutY="478.0" />
+
+    <Label layoutX="827.0" layoutY="531.0" text="السجل المدرسي :" />
+    <TextField fx:id="schoolRecordField" layoutX="628.0" layoutY="528.0" />
+
+    <Label layoutX="831.0" layoutY="576.0" text="الطور الدراسي :" />
+    <TextField fx:id="educationLevelField" layoutX="628.0" layoutY="572.0" />
+
+</AnchorPane>

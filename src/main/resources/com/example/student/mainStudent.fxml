@@ -6,19 +6,13 @@
 <?import javafx.scene.text.Font?>
 
 <Pane 
-    maxHeight="-Infinity" 
-    maxWidth="-Infinity" 
-    minHeight="-Infinity" 
-    minWidth="-Infinity" 
-    prefHeight="485.0" 
-    prefWidth="781.0" 
     xmlns="http://javafx.com/javafx/23.0.1" 
     xmlns:fx="http://javafx.com/fxml/1"
     fx:controller="com.example.controller.student.StudentController"
->
+    prefHeight="485.0" prefWidth="781.0">
+
    <children>
       <Pane prefHeight="485.0" prefWidth="781.0">
-         <!-- Example Buttons -->
          <Button
            fx:id="addStudentButton"
            layoutX="118.0"
@@ -28,8 +22,21 @@
            text="تسجيل طالب جديد"
            onAction="#handleOpenAddStudent"
          />
-         <Button layoutX="478.0" layoutY="127.0" prefHeight="80.0" prefWidth="165.0" text="كشف دفع الحقوق الشهرية " />
-         <Button layoutX="478.0" layoutY="296.0" prefHeight="80.0" prefWidth="165.0" text="كشف الحضور اليومي " />
+         <Button 
+           layoutX="478.0" 
+           layoutY="127.0" 
+           prefHeight="80.0" 
+           prefWidth="165.0" 
+           text="قائمة الطلاب" 
+           onAction="#handleOpenStudentList"
+         />
+         <Button 
+           layoutX="478.0" 
+           layoutY="296.0" 
+           prefHeight="80.0" 
+           prefWidth="165.0" 
+           text="كشف الحضور اليومي"
+         />
          <Button 
            fx:id="backButton"
            layoutX="118.0" 
@@ -37,9 +44,10 @@
            prefHeight="80.0" 
            prefWidth="165.0" 
            text="رجوع الى الصفحة الرئيسية"
-           onAction="#handleBackToHome" 
+           onAction="#handleBackToHome"
          />
-         <Label alignment="TOP_CENTER" layoutX="264.0" layoutY="38.0" prefHeight="18.0" prefWidth="254.0" text="بوابة الطالب">
+         <Label alignment="TOP_CENTER" layoutX="264.0" layoutY="38.0"
+                prefHeight="18.0" prefWidth="254.0" text="بوابة الطالب">
             <font>
                <Font size="22.0" />
             </font>
