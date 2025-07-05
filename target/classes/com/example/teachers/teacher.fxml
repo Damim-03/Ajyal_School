@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="638.0" prefWidth="941.0"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.controller.teachers.TeacherController">
+
+   <children>
+      <Pane prefHeight="638.0" prefWidth="941.0">
+         <Button fx:id="addTeacherButton" layoutX="76.0" layoutY="127.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="اضافة استاذ جديد"
+                 onAction="#handleAddTeacher"/>
+
+         <Button fx:id="teacherListButton" layoutX="76.0" layoutY="296.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="قائمة الاساتذة"
+                 onAction="#handleOpenTeacherList"/>
+
+         <Button fx:id="attendanceButton" layoutX="333.0" layoutY="296.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="كشف الحضور اليومي"
+                 onAction="#handleDailyAttendance"/>
+
+         <Button fx:id="backButton" layoutX="76.0" layoutY="458.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="رجوع الى الصفحة الرئيسية"
+                 onAction="#handleBackToHome"/>
+
+         <Label alignment="TOP_CENTER" layoutX="344.0" layoutY="37.0"
+                prefHeight="18.0" prefWidth="254.0" text="بوابة الاستاذ">
+            <font>
+               <Font size="22.0"/>
+            </font>
+         </Label>
+
+         <Button fx:id="addStudentToClassButton" layoutX="584.0" layoutY="127.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="اضافة طالب للفوج"
+                 onAction="#handleAddStudentToClass"/>
+
+         <Button fx:id="addClassButton" layoutX="333.0" layoutY="127.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="اضافة فوج جديد"
+                 onAction="#handleAddClass"/>
+
+         <Button fx:id="paymentReportButton" layoutX="591.0" layoutY="296.0"
+                 prefHeight="80.0" prefWidth="165.0"
+                 text="كشف دفع الحقوق الشهرية"
+                 onAction="#handleMonthlyPaymentReport"/>
+      </Pane>
+   </children>
+</Pane>

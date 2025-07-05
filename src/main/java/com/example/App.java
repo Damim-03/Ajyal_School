@@ -15,7 +15,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Load the initial FXML (login view)
-        scene = new Scene(loadFXML("student/mainStudent"), 1080, 720);
+        scene = new Scene(loadFXML("teachers/teacher"), 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Ajyal School Management System");
         stage.show();

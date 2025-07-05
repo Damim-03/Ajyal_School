@@ -1,2 +1,8 @@
+com\example\controller\home\HomeController.class
+com\example\controller\student\StudentController.class
 module-info.class
 com\example\App.class
+com\example\controller\auth\LoginController.class
+com\example\DB\DBConnection.class
+com\example\controller\auth\RegisterController.class
+com\example\controller\student\Student.class

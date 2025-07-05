@@ -36,6 +36,7 @@
            prefHeight="80.0" 
            prefWidth="165.0" 
            text="كشف الحضور اليومي"
+           onAction="#handleOpenAttendance"
          />
          <Button 
            fx:id="backButton"
